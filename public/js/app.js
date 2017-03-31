@@ -47,7 +47,7 @@ angular
         controllerAs: "vm"
       })
       .state("articlesShow", {
-        url: "/articles/:name",
+        url: "/articles/:title",
         templateUrl: "js/ng-views/articles/show.html",
         controller: "articlesShowCtrl",
         controllerAs: "vm"
@@ -55,7 +55,7 @@ angular
   }
 
   function ThoreauFactoryFunction($resource) {
-    return $resource("api/articles/:name", {}, {
+    return $resource("api/articles/:title", {}, {
       update: {method: "PUT"}
     })
   }
@@ -82,7 +82,7 @@ angular
       })
     }
     this.delete = function() {
-      this.article.$delete({name:$stateParams.title}).then(function() {
+      this.article.$delete({title:$stateParams.title}).then(function() {
         $state.go("articlesIndex")
       })
     }

@@ -2,4 +2,6 @@
 
 <section>
   <div data-ng-repeat="article in vm.articles" ui-sref="articlesShow({title: article.title})">
+    <h3>{{article.title}}</h3>
+  </div>
 </section>

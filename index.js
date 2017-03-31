@@ -54,7 +54,7 @@ app.put("/api/articles/:title", (req, res) => {
 
 app.get('*', function(req, res) {
     res.sendfile('./public/index.html');
-});.
+});
 
 app.listen(app.get("port"), () => {
   console.log('App is listening')

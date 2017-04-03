@@ -1,7 +1,7 @@
 <h2>Truths</h2>
 
 <section>
-  <div data-ng-repeat="article in vm.articles">
+  <div data-ng-repeat="article in vm.articles | filter: truth | limitTo: numLimit">
     <span ui-sref="articlesShow({title: article.title})" id="article-titles">{{article.title}}</span>
     <h5>by: {{article.author}} @ {{article.source}}</h5>
   </div>

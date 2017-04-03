@@ -1,8 +1,8 @@
-  <h2>{{vm.article.title}}</h2>
-  <h3>{{vm.article.author}}</h3>
-  <h2>{{vm.article.source}}</h2>
-    <p>{{vm.article.link}}</p>
-    <p>{{vm.article.tags}}</p>
+<h2>{{vm.article.title}}</h2>
+<h3>By: {{vm.article.author}}</h3>
+<h2>From: {{vm.article.source}}</h2>
+<a href="{{vm.article.link}}" target="_blank">Go to Article</a>
+<p>{{vm.article.tags}}</p>
 
 <div>
   <button class="edit_button" ng-click="edit = !edit">Edit</button>
@@ -15,9 +15,9 @@
     <input ng-model="vm.article.source">
     <input ng-model="vm.article.link">
     <input ng-model="vm.article.tags">
-  <span class="buttonbg">
-    <button type="submit" ng-click="edit = !edit" ng-show="edit">Update</button>
-  </span>
+    <span class="buttonbg">
+      <button type="submit" ng-click="edit = !edit" ng-show="edit">Update</button>
+    </span>
   </form>
 
   <div>

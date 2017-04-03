@@ -18,6 +18,12 @@
     <div>
       <a data-ui-sref="articlesIndex"><button>Home</button></a>
     </div>
+    <div class="search_bar">
+      <input type="text" ng-model='truth' class="inputText" placeholder="Search">
+    </div>
+    <div class="limit_bar">
+      <input type="number" ng-model='numLimit' class="inputNumber" placeholder="Truths per page">
+    </div>
   </header>
     <main data-ui-view></main>
   </body>

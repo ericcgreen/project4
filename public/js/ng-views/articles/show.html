@@ -3,20 +3,11 @@
 <h2>From: {{vm.article.source}}</h2>
 <a href="{{vm.article.link}}" target="_blank">Go to Article</a>
 <p>{{vm.article.tags}}</p>
-
-<div class="star-box">
-  <img ng-src="images/star.png" id="star-1">
-  <img ng-src="images/star.png" id="star-2">
-  <img ng-src="images/star.png" id="star-3">
-  <img ng-src="images/star.png" id="star-4">
-  <img ng-src="images/star.png" id="star-5">
-  <div class="star-bar" style="width: {{parseInt(article.rating)/5*100+"%"}}"></div>
-</div>
+<p>{{vm.article.rating}}</p>
 
 <div>
   <button class="edit_button" ng-click="edit = !edit">Edit</button>
 </div>
-
 
 <div class="edit_form">
   <form class="editing" ng-show="edit" ng-submit="vm.update()">
@@ -25,19 +16,13 @@
     <input ng-model="vm.article.source">
     <input ng-model="vm.article.link">
     <input ng-model="vm.article.tags">
-
-
-  <div class="star-box">
-    <img ng-src="images/star.png" id="star-1">
-    <img ng-src="images/star.png" id="star-2">
-    <img ng-src="images/star.png" id="star-3">
-    <img ng-src="images/star.png" id="star-4">
-    <img ng-src="images/star.png" id="star-5">
-    <div class="star-bar"></div>
-    <input type="hidden" value="{{article.rating}}" id="star-val">
-  </div>
-
-
+    <select ng-model="vm.article.rating" name="select">
+      <option value="False">1 - False</option>
+      <option value="Mostly False">2 - Mostly False</option>
+      <option value="Somewhat True">3 - Somewhat True</option>
+      <option value="Mostly True">4 - Mostly True</option>
+      <option value="Honest">5 - Honest</option>
+    </select>
     <span class="buttonbg">
       <button type="submit" ng-click="edit = !edit" ng-show="edit">Update</button>
     </span>
@@ -47,5 +32,3 @@
     <button type="submit" ng-click="vm.delete(article)">Delete</button>
   </div>
 </div>
-
-<script src="js/script.js"></script>

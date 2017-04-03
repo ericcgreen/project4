@@ -5,12 +5,12 @@
 </div>
 
 <section id="articles-list">
-  <div class="articles" data-ng-repeat="article in vm.articles | filter: truth | limitTo: numLimit">
+  <div class="articles" data-ng-repeat="article in vm.articles | filter: truth | limitTo: numLimit" ng-class="{'false': article.rating == 'False', 'mostly-false': article.rating == 'Mostly False', 'somewhat-true': article.rating == 'Somewhat True', 'mostly-true': article.rating == 'Mostly True', 'honest': article.rating == 'Honest'}">
     <span ui-sref="articlesShow({title: article.title})" id="article-titles">{{article.title}}</span>
     <h5>by: {{article.author}} @ {{article.source}}</h5>
 
     <p>{{article.rating}}</p>
 
-    
+
   </div>
 </section>

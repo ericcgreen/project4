@@ -6,20 +6,16 @@
   <input placeholder="Source" ng-model="vm.newArticle.source">
   <input placeholder="Link" ng-model="vm.newArticle.link">
   <input placeholder="Tags" ng-model="vm.newArticle.tags">
-
-  <div class="star-box">
-    <img ng-src="images/star.png" id="star-1">
-    <img ng-src="images/star.png" id="star-2">
-    <img ng-src="images/star.png" id="star-3">
-    <img ng-src="images/star.png" id="star-4">
-    <img ng-src="images/star.png" id="star-5">
-    <div class="star-bar"></div>
-    <input type="hidden" value="{{article.rating}}" id="star-val">
-  </div>
+  <select ng-model="vm.newArticle.rating" name="select">
+    <option value="" selected>Rating</option>
+    <option value="False">1 - False</option>
+    <option value="Mostly False">2 - Mostly False</option>
+    <option value="Somewhat True">3 - Somewhat True</option>
+    <option value="Mostly True">4 - Mostly True</option>
+    <option value="Honest">5 - Honest</option>
+  </select>
 
   <div class="buttonbg">
     <button type="submit">Add Truth</button>
   </div>
 </form>
-
-<script src="js/script.js"></script>

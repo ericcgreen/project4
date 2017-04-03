@@ -1,30 +1,26 @@
-<div>
-  <a data-ui-sref="articlesIndex"><button>Home</button></a>
-</div>
-
-
   <h2>{{vm.article.title}}</h2>
   <h3>{{vm.article.author}}</h3>
   <h2>{{vm.article.source}}</h2>
     <p>{{vm.article.link}}</p>
     <p>{{vm.article.tags}}</p>
 
-  <div>
+<div>
   <button class="edit_button" ng-click="edit = !edit">Edit</button>
+</div>
+
+<div class="edit_form">
+  <form class="editing" ng-show="edit" ng-submit="vm.update()">
+    <input ng-model="vm.article.title">
+    <input ng-model="vm.article.author">
+    <input ng-model="vm.article.source">
+    <input ng-model="vm.article.link">
+    <input ng-model="vm.article.tags">
+  <span class="buttonbg">
+    <button type="submit" ng-click="edit = !edit" ng-show="edit">Update</button>
+  </span>
+  </form>
+
+  <div>
+    <button type="submit" ng-click="vm.delete(article)">Delete</button>
   </div>
-    <div class="edit_form">
-      <form class="editing" ng-show="edit" ng-submit="vm.update()">
-        <input ng-model="vm.article.title">
-        <input ng-model="vm.article.author">
-        <input ng-model="vm.article.source">
-        <input ng-model="vm.article.link">
-        <input ng-model="vm.article.tags">
-        <div class="buttonbg">
-          <button type="submit" ng-click="edit = !edit" ng-show="edit">Update</button>
-        </div>
-      </form>
-      <div>
-        <button type="submit" ng-click="vm.delete(article)">Delete</button>
-      </div>
-    </div>
 </div>

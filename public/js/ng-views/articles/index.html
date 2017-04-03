@@ -1,8 +1,12 @@
-<h2>Articles</h2>
+<h2>Truths</h2>
 
 <section>
-  <div data-ng-repeat="article in vm.articles" ui-sref="articlesShow({title: article.title})">
-    <h3>{{article.title}}</h3>
+  <div data-ng-repeat="article in vm.articles">
+    <span ui-sref="articlesShow({title: article.title})" id="article-titles">{{article.title}}</span>
+    <h5>by: {{article.author}} @ {{article.source}}</h5>
   </div>
-
 </section>
+
+<div>
+  <button ui-sref="articlesNew">Add a truth</button>
+</div>

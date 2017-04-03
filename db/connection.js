@@ -11,6 +11,6 @@ var ArticleSchema = new mongoose.Schema(
 );
 
 mongoose.model("Article", ArticleSchema);
-mongoose.connect("mongodb://localhost/whenpresident");
+mongoose.connect("mongodb://localhost/thoraeu");
 
 module.exports = mongoose;

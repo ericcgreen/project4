@@ -4,37 +4,36 @@ header {
   justify-content: space-around;
 }
 
+#app_body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #articles-list {
   display: flex;
   flex-direction: column;
+  width: 500px;
+  /*margin: auto;*/
+  background-color: rgba(200,200,200,.3);
+  border-right: 4px dashed black;
+}
+
+.articles {
   width: 400px;
-  margin: auto;
+  height: 150px;
+  text-align: center;
+  margin: 1em auto;
 }
 
 #article-titles {
   cursor: pointer;
 }
 
-.star-box {
-  display: inline-block;
-  background: #fff;
-  position: relative;
-}
-.star-box img {
-  cursor: pointer;
-  float: left;
-  position: relative;
-  width: 30px;
-  z-index: 2;
-}
-.star-bar {
-  position: absolute;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: yellow;
-  width: 0%;
-  z-index: 0;
+.sidebar {
+  width: 200px;
+  background-color: rgba(200,200,200,.3);
+  /*margin: auto;*/
 }
 
 .false {

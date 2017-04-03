@@ -14,7 +14,7 @@ let quotes = [
 
 function randomize(quotes){
   let random = quotes[Math.floor(Math.random()*quotes.length)]
-  $('#quotes-box').html(random)
+  $('#quotes-line').html(random)
 }
 
 randomize(quotes)

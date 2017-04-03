@@ -5,6 +5,8 @@
 </div>
 
 <div id="app_body">
+
+
 <div id="articles-list">
   <div class="articles" data-ng-repeat="article in vm.articles | filter: truth | limitTo: numLimit" ng-class="{'false': article.rating == 'False', 'mostly-false': article.rating == 'Mostly False', 'somewhat-true': article.rating == 'Somewhat True', 'mostly-true': article.rating == 'Mostly True', 'honest': article.rating == 'Honest'}" ui-sref="articlesShow({title: article.title})" id="article-titles">
     <h3>{{article.title}}</h3>
@@ -16,7 +18,7 @@
 
 <div class="sidebar">
   <div id="quotes-box">
-
+    <p>"<span id="quotes-line"> </span>" -- Henry David Thoreau</p>
   </div>
 </div>
 </div>

@@ -7,6 +7,7 @@ var ArticleSchema = new mongoose.Schema(
       "source": String,
       "link": String,
       "tags": String,
+      "rating": String,
   }
 );
 

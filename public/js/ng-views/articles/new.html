@@ -1,4 +1,3 @@
-
 <h2>Add a truth</h2>
 
 <form class="" ng-submit="vm.create()" method="post">
@@ -7,7 +6,20 @@
   <input placeholder="Source" ng-model="vm.newArticle.source">
   <input placeholder="Link" ng-model="vm.newArticle.link">
   <input placeholder="Tags" ng-model="vm.newArticle.tags">
+
+  <div class="star-box">
+    <img ng-src="images/star.png" id="star-1">
+    <img ng-src="images/star.png" id="star-2">
+    <img ng-src="images/star.png" id="star-3">
+    <img ng-src="images/star.png" id="star-4">
+    <img ng-src="images/star.png" id="star-5">
+    <div class="star-bar"></div>
+    <input type="hidden" value="{{article.rating}}" id="star-val">
+  </div>
+
   <div class="buttonbg">
     <button type="submit">Add Truth</button>
   </div>
 </form>
+
+<script src="js/script.js"></script>

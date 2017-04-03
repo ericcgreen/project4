@@ -1,12 +1,16 @@
 <h2>Truths</h2>
 
-<section>
-  <div data-ng-repeat="article in vm.articles | filter: truth | limitTo: numLimit">
-    <span ui-sref="articlesShow({title: article.title})" id="article-titles">{{article.title}}</span>
-    <h5>by: {{article.author}} @ {{article.source}}</h5>
-  </div>
-</section>
-
-<div>
+<div id="add-button">
   <button ui-sref="articlesNew">Add a truth</button>
 </div>
+
+<section id="articles-list">
+  <div class="articles" data-ng-repeat="article in vm.articles | filter: truth | limitTo: numLimit">
+    <span ui-sref="articlesShow({title: article.title})" id="article-titles">{{article.title}}</span>
+    <h5>by: {{article.author}} @ {{article.source}}</h5>
+
+    <p>{{article.rating}}</p>
+
+    
+  </div>
+</section>

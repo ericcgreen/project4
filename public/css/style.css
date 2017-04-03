@@ -31,9 +31,18 @@ header {
 }
 
 .sidebar {
-  width: 200px;
+  width: 300px;
   background-color: rgba(200,200,200,.3);
-  /*margin: auto;*/
+  text-align: center;
+}
+
+#quotes-box {
+  width: 200px;
+  height: 300px;
+  border: 2px solid black;
+  text-align: center;
+  margin: auto;
+  background-color: rgba(10,10,10,.1);
 }
 
 .false {

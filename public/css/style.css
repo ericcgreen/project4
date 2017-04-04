@@ -26,6 +26,10 @@ h3, h4, h5, p, button, input, select {
   font-family: 'Sorts Mill Goudy', serif;
 }
 
+/*h3, h4, h5, p {
+  padding: 15px 7px 7px;
+}*/
+
 #welcome-box {
   height: 200px;
   margin: 7em auto;
@@ -68,26 +72,27 @@ h3, h4, h5, p, button, input, select {
   display: flex;
   flex-direction: column;
   width: 500px;
-  /*background-color: rgba(200,200,200,.3);*/
   border-right: 2px solid black;
+  text-align: center;
 }
 
 .articles {
   width: 400px;
-  height: 170px;
+  height: 200px;
   text-align: center;
   margin: 1em auto;
   overflow-y: scroll;
+  cursor: pointer;
 }
 
-#article-titles {
-  cursor: pointer;
+.articles:hover {
+  background-color: rgba(0,0,0,0);
+  transform: scale(1.1);
 }
 
 .sidebar {
   width: 400px;
   height: 600px;
-  /*background-color: rgba(200,200,200,.3);*/
   text-align: center;
 }
 
@@ -97,11 +102,12 @@ h3, h4, h5, p, button, input, select {
   border: 2px solid black;
   text-align: center;
   margin: 1em auto;
-  background-color: rgba(10,10,10,.1);
+  background-color: rgba(0,0,0,1);
 }
 
 #quotes-box p {
-  margin-top: 15%;
+  color: white;
+  margin-top: 14%;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -170,8 +176,10 @@ button:hover {
   color: white;
 }
 
-button:focus, input:focus, select:focus {
-  outline:0;
+@keyframes glowing {
+  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
 }
 
 #delete-button:hover {
@@ -179,8 +187,19 @@ button:focus, input:focus, select:focus {
   animation: glowing 1500ms infinite;
 }
 
-@keyframes glowing {
-  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
-  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
-  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+input:hover, select:hover {
+  background-color: rgba(10,10,10,.1);
+}
+
+::-webkit-input-placeholder {
+  color: rgba(0,0,0,.5);
+}
+
+button:focus, input:focus, select:focus {
+  outline:0;
+}
+
+
+#limit-number {
+  width: 120px;
 }

@@ -6,11 +6,12 @@
 
 
 <div id="articles-list">
-  <div class="articles" data-ng-repeat="article in vm.articles | filter: truth | limitTo: numLimit" ng-class="{'false': article.rating == 'False', 'mostly-false': article.rating == 'Mostly False', 'somewhat-true': article.rating == 'Somewhat True', 'mostly-true': article.rating == 'Mostly True', 'honest': article.rating == 'Honest'}" ui-sref="articlesShow({title: article.title})" id="article-titles">
+  <h2>Truths</h2>
+  <div class="articles" data-ng-repeat="article in vm.articles | filter: truth | limitTo: numLimit" ng-class="{'false': article.rating == 'False', 'mostly-false': article.rating == 'Mostly False', 'somewhat-true': article.rating == 'Somewhat True', 'mostly-true': article.rating == 'Mostly True', 'honest': article.rating == 'Honest'}" ui-sref="articlesShow({title: article.title})">
     <h3>{{article.title}}</h3>
-    <h5>by: {{article.author}} @ {{article.source}}</h5>
-
-    <p>{{article.rating}}</p>
+    <h5>By: {{article.author}} @ {{article.source}}</h5>
+    <p>Tags: {{article.tags}}</p>
+    <p>Rating: {{article.rating}}</p>
   </div>
 </div>
 

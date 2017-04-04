@@ -22,11 +22,11 @@
     <div>
       <button ui-sref="articlesNew">Add a truth</button>
     </div>
+    <div class="limit_bar">
+      <input type="number" ng-model='numLimit' min="1" id="limit-number" placeholder="Truths per page">
+    </div>
     <div class="search_bar">
       <input type="text" ng-model='truth' class="inputText" placeholder="Search">
-    </div>
-    <div class="limit_bar">
-      <input type="number" ng-model='numLimit' min="1" class="inputNumber" placeholder="Truths per page">
     </div>
     </div>
   </header>

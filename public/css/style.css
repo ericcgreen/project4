@@ -10,11 +10,16 @@ header {
   align-items: center;
 }
 
+#index-title {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+}
+
 #articles-list {
   display: flex;
   flex-direction: column;
   width: 500px;
-  /*margin: auto;*/
   background-color: rgba(200,200,200,.3);
   border-right: 4px dashed black;
 }
@@ -32,6 +37,7 @@ header {
 
 .sidebar {
   width: 300px;
+  height: 600px;
   background-color: rgba(200,200,200,.3);
   text-align: center;
 }
@@ -41,8 +47,15 @@ header {
   height: 200px;
   border: 2px solid black;
   text-align: center;
-  margin: auto;
+  margin: 1em auto;
   background-color: rgba(10,10,10,.1);
+}
+
+#twitter-box {
+  height: 350px;
+  width: 250px;
+  margin: 1em auto;
+  overflow-y: scroll;
 }
 
 .false {

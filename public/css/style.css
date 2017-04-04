@@ -20,15 +20,12 @@ h1 {
 
 h2 {
   font-family: 'Roboto', sans-serif;
+  font-size: 30px;
 }
 
 h3, h4, h5, p, button, input, select {
   font-family: 'Sorts Mill Goudy', serif;
 }
-
-/*h3, h4, h5, p {
-  padding: 15px 7px 7px;
-}*/
 
 #welcome-box {
   height: 200px;
@@ -60,6 +57,13 @@ h3, h4, h5, p, button, input, select {
   justify-content: center;
   align-items: center;
   margin-bottom: 5em;
+}
+
+#new-article-body {
+  width: 400px;
+  height: 300px;
+  margin: 10em auto;
+  text-align: center;
 }
 
 #index-title {
@@ -171,15 +175,15 @@ input, select, button {
   font-size: 1em;
 }
 
-button:hover {
-  background-color: rgba(0,0,0,1);
-  color: white;
-}
-
 @keyframes glowing {
   0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
   50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
   100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+
+button:hover {
+  background-color: rgba(0,0,0,1);
+  color: white;
 }
 
 #delete-button:hover {
@@ -199,7 +203,15 @@ button:focus, input:focus, select:focus {
   outline:0;
 }
 
-
 #limit-number {
   width: 120px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: red;
 }

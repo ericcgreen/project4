@@ -1,8 +1,10 @@
+<div id="article-show-body">
+
 <h2>{{vm.article.title}}</h2>
 <h3>By: {{vm.article.author}}</h3>
-<h2>From: {{vm.article.source}}</h2>
+<h3>From: {{vm.article.source}}</h3>
 <a href="{{vm.article.link}}" target="_blank">Go to Article</a>
-<p>{{vm.article.tags}}</p>
+<p>Tags: {{vm.article.tags}}</p>
 <p>{{vm.article.rating}}</p>
 
 <div>
@@ -31,4 +33,5 @@
   <div>
     <button type="submit" ng-click="vm.delete(article)">Delete</button>
   </div>
+</div>
 </div>

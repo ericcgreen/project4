@@ -14,15 +14,20 @@
   </head>
   <body>
   <header>
+    <div id="headerbar">
     <h1 id="app-title">Thoreau</h1>
     <div>
-      <a data-ui-sref="articlesIndex"><button>Home</button></a>
+      <button ui-sref="articlesIndex">Home</button>
+    </div>
+    <div>
+      <button ui-sref="articlesNew">Add a truth</button>
     </div>
     <div class="search_bar">
       <input type="text" ng-model='truth' class="inputText" placeholder="Search">
     </div>
     <div class="limit_bar">
-      <input type="number" ng-model='numLimit' class="inputNumber" placeholder="Truths per page">
+      <input type="number" ng-model='numLimit' min="1" class="inputNumber" placeholder="Truths per page">
+    </div>
     </div>
   </header>
     <main data-ui-view></main>

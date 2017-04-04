@@ -1,15 +1,15 @@
 <div id="article-show-body">
 
-<h2>{{vm.article.title}}</h2>
-<h3>By: {{vm.article.author}}</h3>
-<h3>From: {{vm.article.source}}</h3>
-<a href="{{vm.article.link}}" target="_blank">Go to Article</a>
-<p>Tags: {{vm.article.tags}}</p>
-<p>{{vm.article.rating}}</p>
+  <h2>{{vm.article.title}}</h2>
+  <h3>By: {{vm.article.author}}</h3>
+  <h3>From: {{vm.article.source}}</h3>
+  <a href="{{vm.article.link}}" target="_blank">Go to Article</a>
+  <p>Tags: {{vm.article.tags}}</p>
+  <p>Rating: {{vm.article.rating}}</p>
 
-<div>
-  <button class="edit_button" ng-click="edit = !edit">Edit</button>
-</div>
+  <div>
+    <button class="edit_button" ng-click="edit = !edit">Edit</button>
+  </div>
 
 <div class="edit_form">
   <form class="editing" ng-show="edit" ng-submit="vm.update()">
@@ -25,13 +25,13 @@
       <option value="Mostly True">4 - Mostly True</option>
       <option value="Honest">5 - Honest</option>
     </select>
-    <span class="buttonbg">
+    <div class="buttonbg">
       <button type="submit" ng-click="edit = !edit" ng-show="edit">Update</button>
-    </span>
+    </div>
   </form>
 
   <div>
-    <button type="submit" ng-click="vm.delete(article)">Delete</button>
+    <button id="delete-button" type="submit" ng-click="vm.delete(article)">Delete</button>
   </div>
 </div>
 </div>

@@ -1,15 +1,49 @@
 header {
+  background-color: white;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:2000;
+  width: 100%;
+}
+
+#headerbar {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  width: 100%;
+}
+
+h1 {
+  font-size: 50px;
 }
 
 h2 {
   font-family: 'Roboto', sans-serif;
 }
 
-h3, h4, h5, p, button, input {
+h3, h4, h5, p, button, input, select {
   font-family: 'Sorts Mill Goudy', serif;
+}
+
+#welcome-box {
+  height: 200px;
+  margin: 7em auto;
+  text-align: center;
+}
+
+#welcome-quote {
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 30px;
+  margin: auto;
+}
+
+#welcome-quote p {
+  margin-top: 8em;
+}
+
+#welcome-button {
+  width: 150px;
 }
 
 #app-title {
@@ -17,9 +51,11 @@ h3, h4, h5, p, button, input {
 }
 
 #app-body {
+  margin-top: 7em;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5em;
 }
 
 #index-title {
@@ -32,8 +68,8 @@ h3, h4, h5, p, button, input {
   display: flex;
   flex-direction: column;
   width: 500px;
-  background-color: rgba(200,200,200,.3);
-  border-right: 4px dashed black;
+  /*background-color: rgba(200,200,200,.3);*/
+  border-right: 2px solid black;
 }
 
 .articles {
@@ -49,24 +85,30 @@ h3, h4, h5, p, button, input {
 }
 
 .sidebar {
-  width: 300px;
+  width: 400px;
   height: 600px;
-  background-color: rgba(200,200,200,.3);
+  /*background-color: rgba(200,200,200,.3);*/
   text-align: center;
 }
 
 #quotes-box {
-  width: 250px;
-  height: 200px;
+  width: 320px;
+  height: 170px;
   border: 2px solid black;
   text-align: center;
   margin: 1em auto;
   background-color: rgba(10,10,10,.1);
 }
 
+#quotes-box p {
+  margin-top: 15%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 #twitter-box {
   height: 350px;
-  width: 250px;
+  width: 320px;
   margin: 1em auto;
   overflow-y: scroll;
 }
@@ -96,22 +138,49 @@ h3, h4, h5, p, button, input {
   background-color: rgba(0,255,0,.3);
 }
 
-#add-button, #add-button button, button {
-  height: 40px;
+button {
   width: 100px;
-  margin: auto;
+  height: 56px;
+  background-color: rgba(0,0,0,0);
 }
 
 #article-show-body {
-  height: 700px;
   width: 500px;
-  margin: auto;
+  margin: 10em auto 0;
   text-align: center;
 }
 
 input, select {
-  width: 18em;
-  height: 3em;
+  width: 17em;
   padding-left: 1em;
+  height: 50px;
+}
+
+input, select, button {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-right: none;
+  border-left: none;
+  margin: 5px auto;
   font-size: 1em;
+}
+
+button:hover {
+  background-color: rgba(0,0,0,1);
+  color: white;
+}
+
+button:focus, input:focus, select:focus {
+  outline:0;
+}
+
+#delete-button:hover {
+  background-color: rgba(255,0,0,1);
+  animation: glowing 1500ms infinite;
+}
+
+@keyframes glowing {
+  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
 }

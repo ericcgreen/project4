@@ -5,6 +5,7 @@ angular
   ])
   .config([
     "$stateProvider",
+    "$urlRouterProvider",
     RouterFunction
   ])
   .factory("ThoreauFactory", [
@@ -28,7 +29,7 @@ angular
     ArticlesShowControllerFunction
   ])
 
-  function RouterFunction($stateProvider) {
+  function RouterFunction($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state("welcome", {
         url: "/",
@@ -52,6 +53,7 @@ angular
         controller: "articlesShowCtrl",
         controllerAs: "vm"
       })
+      $urlRouterProvider.otherwise("articles")
   }
 
   function ThoreauFactoryFunction($resource) {

@@ -15,19 +15,19 @@
   <body>
   <header>
     <div id="headerbar">
-    <h1 id="app-title">Thoreau</h1>
-    <div>
-      <button ui-sref="articlesIndex">Home</button>
-    </div>
-    <div>
-      <button ui-sref="articlesNew">Add a truth</button>
-    </div>
-    <div class="limit_bar">
-      <input type="number" ng-model='numLimit' min="1" id="limit-number" placeholder="Truths per page">
-    </div>
-    <div class="search_bar">
-      <input type="text" ng-model='truth' class="inputText" placeholder="Search">
-    </div>
+      <h1 id="app-title">Thoreau</h1>
+      <div>
+        <button ui-sref="articlesIndex">Home</button>
+      </div>
+      <div>
+        <button ui-sref="articlesNew">Add a truth</button>
+      </div>
+      <div class="limit_bar">
+        <input type="number" ng-model='numLimit' min="1" id="limit-number" placeholder="Truths per page">
+      </div>
+      <div class="search_bar">
+        <input type="text" ng-model='truth' class="inputText" placeholder="Search">
+      </div>
     </div>
   </header>
     <main data-ui-view></main>

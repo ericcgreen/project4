@@ -54,9 +54,10 @@ h3, h4, h5, p, button, input, select {
 #app-body {
   margin-top: 7em;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5em;
+  margin-bottom: 3em;
 }
 
 #new-article-body {
@@ -76,7 +77,10 @@ h3, h4, h5, p, button, input, select {
   display: flex;
   flex-direction: column;
   width: 500px;
+  height: 600px;
+  overflow-y: scroll;
   border-right: 2px solid black;
+  border-left: 2px solid black;
   text-align: center;
 }
 
@@ -85,7 +89,7 @@ h3, h4, h5, p, button, input, select {
   height: 200px;
   text-align: center;
   margin: 1em auto;
-  overflow-y: scroll;
+  overflow-y: hidden;
   cursor: pointer;
 }
 
@@ -94,10 +98,19 @@ h3, h4, h5, p, button, input, select {
   transform: scale(1.1);
 }
 
-.sidebar {
+.left-sidebar {
   width: 400px;
   height: 600px;
   text-align: center;
+  align-self: center;
+}
+
+.right-sidebar {
+  width: 400px;
+  height: 600px;
+  text-align: center;
+  align-self: center;
+  display: flex;
 }
 
 #quotes-box {

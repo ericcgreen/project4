@@ -18,18 +18,20 @@
   <body>
   <header>
     <div id="headerbar">
-      <h1 id="app-title">Thoreau</h1>
-      <div>
-        <button ui-sref="articlesIndex">Home</button>
+      <div class="bar">
+        <h1 id="app-title">Thoreau</h1>
       </div>
-      <div>
-        <button ui-sref="articlesNew">Add a truth</button>
+      <div class="bar">
+        <button id="home-button" ui-sref="articlesIndex">Home</button>
       </div>
-      <div class="limit_bar">
-        <input type="number" ng-model='numLimit' min="1" id="limit-number" placeholder="Truths per page">
+      <div class="bar">
+        <button id="truth-button" ui-sref="articlesNew">Add a truth</button>
       </div>
-      <div class="search_bar">
-        <input type="text" ng-model='truth' class="inputText" placeholder="Search">
+      <div class="limit_bar bar">
+        <input id="limit-field" type="number" ng-model='numLimit' min="1" id="limit-number" placeholder="Number of truths to view">
+      </div>
+      <div class="search_bar bar">
+        <input id="search-field" type="text" ng-model='truth' class="inputText" placeholder="Search">
       </div>
     </div>
   </header>

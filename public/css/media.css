@@ -1,3 +1,12 @@
+@media screen and (max-width: 1150px) {
+  #app-body {
+    flex-direction: column;
+    }
+    #articles-list {
+      order: 1;
+    }
+}
+
 /* ----------- Non-Retina Screens ----------- */
 @media screen
   and (min-device-width: 1200px)
@@ -22,6 +31,9 @@
     #app-body {
       flex-direction: column;
       }
+      #articles-list {
+        order: 1;
+      }
 }
 
 /* ----------- Retina Screens ----------- */
@@ -32,6 +44,9 @@
   and (min-resolution: 192dpi) {
     #app-body {
       flex-direction: column;
+      }
+      #articles-list {
+        order: 1;
       }
 }
 
@@ -52,6 +67,9 @@
   and (orientation: portrait) {
 #app-body {
   flex-direction: column;
+  }
+  #articles-list {
+    order: 1;
   }
 }
 
@@ -80,6 +98,9 @@
   and (orientation: portrait) {
     #app-body {
       flex-direction: column;
+      }
+      #articles-list {
+        order: 1;
       }
 }
 
@@ -110,6 +131,9 @@
     #app-body {
       flex-direction: column;
       }
+      #articles-list {
+        order: 1;
+      }
 }
 
 /* Landscape */
@@ -137,6 +161,9 @@
   and (-webkit-min-device-pixel-ratio: 1) {
     #app-body {
       flex-direction: column;
+      }
+      #articles-list {
+        order: 1;
       }
 }
 
@@ -167,6 +194,9 @@
 #app-body {
   flex-direction: column;
   }
+  #articles-list {
+    order: 1;
+  }
 }
 
 /* Landscape */
@@ -196,6 +226,9 @@
 #app-body {
   flex-direction: column;
   }
+  #articles-list {
+    order: 1;
+  }
 }
 
 /* Landscape */
@@ -222,6 +255,9 @@
   and (orientation: portrait) {
     #app-body {
       flex-direction: column;
+      }
+      #articles-list {
+        order: 1;
       }
 }
 

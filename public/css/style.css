@@ -4,14 +4,14 @@ header {
   top:0;
   left:0;
   z-index:2000;
-  width: 100%;
+  width: 100vw;
 }
 
 #headerbar {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 100%;
+  width: 100vw;
   margin: 40px auto;
 }
 
@@ -288,14 +288,12 @@ a:hover {
   border: none;
   margin: 0;
   height: 58px;
-
 }
 
 #search-field {
   border: none;
   margin: 0;
   height: 58px;
-
 }
 
 .search-bar {

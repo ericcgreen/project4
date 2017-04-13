@@ -20,11 +20,10 @@ h1 {
 }
 
 h2 {
-  font-family: 'Roboto', sans-serif;
   font-size: 30px;
 }
 
-h3, h4, h5, p, button, input, select {
+h2, h3, h4, h5, p, button, input, select {
   font-family: 'Sorts Mill Goudy', serif;
 }
 

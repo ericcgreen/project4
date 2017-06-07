@@ -1,5 +1,6 @@
 <div id="article-show-body">
-
+  
+  <!-- display more detailed information about the article -->
   <h2>{{vm.article.title}}</h2>
   <h3>By: {{vm.article.author}}</h3>
   <h3>From: {{vm.article.source}}</h3>
@@ -7,31 +8,36 @@
   <p>Tags: {{vm.article.tags}}</p>
   <p>Rating: {{vm.article.rating}}</p>
 
-  <div>
-    <button class="edit_button" ng-click="edit = !edit">Edit</button>
-  </div>
-
-<div class="edit_form">
-  <form class="editing" ng-show="edit" ng-submit="vm.update()">
-    <input ng-model="vm.article.title">
-    <input ng-model="vm.article.author">
-    <input ng-model="vm.article.source">
-    <input ng-model="vm.article.link">
-    <input ng-model="vm.article.tags">
-    <select ng-model="vm.article.rating" name="select">
-      <option value="False">1 - False</option>
-      <option value="Mostly False">2 - Mostly False</option>
-      <option value="Somewhat True">3 - Somewhat True</option>
-      <option value="Mostly True">4 - Mostly True</option>
-      <option value="Honest">5 - Honest</option>
-    </select>
-    <div class="buttonbg">
-      <button type="submit" ng-click="edit = !edit" ng-show="edit">Update</button>
+  <!-- button to show/hide article edit form -->
+    <div>
+      <button class="edit_button" ng-click="edit = !edit">Edit</button>
     </div>
-  </form>
 
-  <div>
-    <button id="delete-button" type="submit" ng-click="vm.delete(article)">Delete</button>
+    <!-- edit form -->
+  <div class="edit_form">
+    <form class="editing" ng-show="edit" ng-submit="vm.update()">
+      <input ng-model="vm.article.title">
+      <input ng-model="vm.article.author">
+      <input ng-model="vm.article.source">
+      <input ng-model="vm.article.link">
+      <input ng-model="vm.article.tags">
+      <select ng-model="vm.article.rating" name="select">
+        <option value="False">1 - False</option>
+        <option value="Mostly False">2 - Mostly False</option>
+        <option value="Somewhat True">3 - Somewhat True</option>
+        <option value="Mostly True">4 - Mostly True</option>
+        <option value="Honest">5 - Honest</option>
+      </select>
+
+      <!-- submit edit button and hide form once submitted -->
+      <div class="buttonbg">
+        <button type="submit" ng-click="edit = !edit" ng-show="edit">Update</button>
+      </div>
+    </form>
+
+    <!-- button to delete article -->
+    <div>
+      <button id="delete-button" type="submit" ng-click="vm.delete(article)">Delete</button>
+    </div>
   </div>
-</div>
 </div>

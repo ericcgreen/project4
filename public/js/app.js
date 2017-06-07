@@ -58,6 +58,7 @@ angular
 
   function ThoreauFactoryFunction($resource) {
     return $resource("api/articles/:title", {}, {
+      // definte and require update method
       update: {method: "PUT"}
     })
   }
@@ -74,7 +75,6 @@ angular
       })
     }
   }
-
 
   function ArticlesShowControllerFunction($stateParams, $state, ThoreauFactory) {
     this.article = ThoreauFactory.get({title: $stateParams.title})

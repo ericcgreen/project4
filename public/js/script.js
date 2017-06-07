@@ -19,3 +19,7 @@ function randomize(quotes){
 
 randomize(quotes)
 })
+
+//go through the array of quotes and return one randomly to display in the text box.
+//Math.random [0,1] times the length of the array
+//Math.floor to then turn the value into an interger which then will be parsed as a index value

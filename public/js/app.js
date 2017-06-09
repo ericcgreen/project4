@@ -53,6 +53,7 @@ angular
         controller: "articlesShowCtrl",
         controllerAs: "vm"
       })
+      //if an invalid url is entered, redirect to the articles list
       $urlRouterProvider.otherwise("articles")
   }
 
@@ -64,6 +65,7 @@ angular
   }
 
   function ArticlesIndexControllerFunction($state, ThoreauFactory) {
+    // query the API with RESTful methods
     this.articles = ThoreauFactory.query()
   }
 

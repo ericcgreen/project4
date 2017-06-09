@@ -53,7 +53,7 @@ angular
         controller: "articlesShowCtrl",
         controllerAs: "vm"
       })
-      //if an invalid url is entered, redirect to the articles list
+      //activated when a state transition is made and if an invalid url is entered, redirect to the articles list
       $urlRouterProvider.otherwise("articles")
   }
 

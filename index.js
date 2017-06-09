@@ -8,6 +8,7 @@ var Article = mongoose.model("Article")
 
 app.set("port", process.env.PORT || 3001)
 
+// replaced express front-end with angularjs
 // app.set("view engine", "hbs")
 // app.engine(".hbs", hbs({
 //   extname:        ".hbs",
@@ -24,7 +25,9 @@ app.use(express.static(__dirname + '/public'))
 
 app.get("/api/articles", (req, res) => {
   Article.find({}).then((articles) => {
+  // find everything, the search is not limited to certain key-value pairs
     res.json(articles)
+    // render the server response back to the browser
   })
 })
 
